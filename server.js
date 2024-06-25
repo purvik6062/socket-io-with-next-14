@@ -3,10 +3,11 @@ import next from "next";
 import { Server } from "socket.io";
 
 const dev = process.env.NODE_ENV !== "production";
-const prod = process.env.NODE_ENV === "production";
+const prod = process.env.NODE_ENV !== "development";
 
 const hostname = "localhost";
-const port = 4000;
+const port = 3000;
+// const app = next({});
 const app = next({ dev });
 // const app = next({ prod });
 const handler = app.getRequestHandler();
